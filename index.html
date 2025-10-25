@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📸 Web Photo Booth Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📸 Bings Photo Booth</h1>
+
+  <div class="booth">
+    <video id="video" autoplay></video>
+    <div id="countdown"></div>
+
+    <div class="controls">
+      <button id="capture">📷 Ambil Foto</button>
+      <button id="retake" disabled>🔄 Ambil Ulang</button>
+      <button id="save" disabled>💾 Simpan</button>
+    </div>
+
+    <div class="filters">
+      <h3>🎨 Pilih Filter:</h3>
+      <button data-filter="none">Normal</button>
+      <button data-filter="grayscale(1)">Hitam Putih</button>
+      <button data-filter="sepia(1)">Vintage</button>
+      <button data-filter="contrast(1.5)">Kontras</button>
+      <button data-filter="blur(2px)">Blur</button>
+    </div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <div id="result">
+    <h3>🖼️ Hasil Foto:</h3>
+    <img id="photo" alt="Hasil foto akan muncul di sini">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
