@@ -57,8 +57,10 @@ function takePhoto() {
   context.filter = currentFilter;
 
   // Gambar video dulu
-  context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
+    context.save();                 // Simpan state awal
+    context.scale(-1, 1);           // Balik horizontal
+    context.drawImage(video, -canvas.width, 0, canvas.width, canvas.height); 
+    context.restore();  
   // Gambar frame di atas video (tidak menutupi hasil)
   if (frame.complete) {
     context.drawImage(frame, 0, 0, canvas.width, canvas.height);
