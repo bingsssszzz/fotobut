@@ -21,6 +21,7 @@ video {
   width: 400px;
   border-radius: 10px;
   border: 4px solid #007bff;
+  transform: scaleX(-1); /* mirror preview agar seperti selfie */
 }
 
 #countdown {
